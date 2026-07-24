@@ -30,7 +30,7 @@ class ChatbotController extends Controller
 
         $chatbot = app(ChatbotService::class);
 
-        $answer = $chatbot->askGemini($message);
+        $answer = $chatbot->ask($message);
 
         return response()->json([
             'success' => true,
